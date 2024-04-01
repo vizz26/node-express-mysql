@@ -1,0 +1,26 @@
+<h3>Customer management system</h3>
+<p><a href="/addUser" class="add-btn">Add customer +</a></p>
+<table>
+    <thead>
+        <tr>
+            <td>#</td>
+            <td>Name</td>
+            <td>Phone</td>
+            <td>Email</td>
+            <td>Edit</td>
+            <td>Delete</td>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each rows}}
+        <tr>
+            <td>{{this.ID}}</td>
+            <td>{{this.NAME}}</td>
+            <td>{{this.PHONE}}</td>
+            <td>{{this.EMAIL}}</td>
+            <td><a href="/editUser/{{this.ID}}" class="edit">Edit</a></td>
+            <td><a href="/deleteUser/{{this.ID}}" class="delete">Delete</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
